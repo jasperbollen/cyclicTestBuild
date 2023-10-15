@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "script": "echo $CYCLIC_URL",
-    "preinstall": "export $(grep -v '^#' .env | xargs) && echo $CYCLIC_URL"
+    "preinstall": "export $(grep -v '^#' .env | xargs) && echo $CYCLIC_URL",
+    "postinstall": "echo wow"
   },
   "repository": {
     "type": "git",
