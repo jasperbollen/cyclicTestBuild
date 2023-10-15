@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "script": "echo $CYCLIC_URL",
-    "preinstall": "export $(grep -v '^#' .env | xargs) && echo $CYCLIC_URL",
+    "preinstall": "export $(grep -v '^#' .env | xargs) && echo @jasperbollen:registry=https://npm.pkg.github.com/ >> ~/.npmrc && echo //npm.pkg.github.com/:_authToken=$GITHUB_ACCESS_TOKEN >> ~/.npmrc",
     "postinstall": "export $(~/.npmrc)"
   },
   "repository": {
@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/jasperbollen/cyclicTestBuild/issues"
   },
-  "homepage": "https://github.com/jasperbollen/cyclicTestBuild#readme"
+  "homepage": "https://github.com/jasperbollen/cyclicTestBuild#readme",
+  "dependencies": {
+    "@jasperbollen/sunflare-growatt": "^0.0.3"
+  }
 }
