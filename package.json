@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "preinstall": "echo \"running preinstall script on $CYCLIC_URL or $npm_config_CYCLIC_URL\""
+    "preinstall": "echo $CYCLIC_URL",
+    "script": "export $(grep -v '^#' .env | xargs) && echo $CYCLIC_URL"
   },
   "repository": {
     "type": "git",
